@@ -30,7 +30,7 @@ public class twoSum {
     }
     
     public static int[] findTwoByHash(int[] a,int target){
-        if (a.length <= 0 || target == 0) {
+        if (a.length <= 0) {
             return a; 
         }
         int[] ret = new int[2];
@@ -42,13 +42,13 @@ public class twoSum {
         for(int j = 0;j < a.length;j++) {
             if(hashMap.get(target - a[j]) != null) {
                 int result = hashMap.get(target - a[j]);
-                if(a[j] > target - a[j]) {
-                    ret[1] = j;
-                    ret[0] = result;
+                if(j >= result) {
+                    ret[1] = j + 1;
+                    ret[0] = result + 1;
                     return ret;
                 } 
-                ret[1] = result;
-                ret[0] = j;
+                ret[1] = result + 1;
+                ret[0] = j + 1;
             }
             hashMap.put(a[j], j);
         }
@@ -56,8 +56,8 @@ public class twoSum {
     }
     
     public static void main(String[] args) {
-        int[] source = {11,32,31,14,25};
-        int target = 57;
+        int[] source = {5,75,25};
+        int target = 100;
         int[] result = findTwoByHash(source,target);
         System.out.println(result[0] +" " + result[1]);
     }
