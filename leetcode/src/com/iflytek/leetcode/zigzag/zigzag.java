@@ -1,4 +1,4 @@
-package com.iflytek.leetcode.demo;
+package com.iflytek.leetcode.zigzag;
 
 
 /**
@@ -47,6 +47,7 @@ public class zigzag {
         String test = "123456789123456789";
       //System.out.println("".equals(null));
         String res = convert(test,4);
+        String.valueOf("3");
         System.out.println(res);
     }
 }

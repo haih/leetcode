@@ -1,4 +1,4 @@
-package com.iflytek.leetcode.demo;
+package com.iflytek.leetcode.twoSum;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -34,6 +34,7 @@ public class twoSum {
             return a; 
         }
         int[] ret = new int[2];
+        //这里的hashmap主要用key存放数值，用value存放位置信息。
         HashMap<Integer, Integer> hashMap = new HashMap<Integer, Integer>();
         //这里是不用先把所有的数字塞进map中的，在计算的过程中，通过判断结果决定是否put到map中，line:53
 //        for(int i = 0;i < a.length;i++) {

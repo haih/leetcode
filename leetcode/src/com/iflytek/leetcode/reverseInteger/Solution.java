@@ -30,6 +30,7 @@ public class Solution {
             return 0;
         }
         if (x < 0) {
+            //对于负数，先转成正数求值，再添加负号
             return -reverse(-x);
         }
         int y = 0;
